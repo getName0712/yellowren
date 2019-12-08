@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .wap{
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);/* 绝对居中 2d位移*/
+        }
+        .hair{
+            width: 96px ;height: 45px;
+
+            border-top:8px solid black;
+            border-color: black transparent transparent;
+            /*上边框*/
+            border-radius: 60px 0;
+
+            position: absolute;
+            transform: rotate(47deg);
+            top:-43px ;left: 31px;
+            border-style: solid dashed dashed;
+            border-width: 8px 0;
+
+        }
+
+        .hair:after{
+            content: "";
+            position: absolute;
+            width: 48px;height: 23px;
+            border-top: 5px solid black;
+            border-color: black transparent transparent;
+            border-radius: 60px 0;
+            transform: rotate(-8deg);
+            top:4px ;left: 42px;
+            border-style: solid dashed dashed;
+            border-width: 8px 0;
+            /*   去虚线           */
+        }
+        .body{
+            width: 203px;height: 356px;
+            border: 5px solid #000000;
+            background-color: yellow;
+            border-radius: 150px  150px 200px  200px ;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+        }
+        .eyebox{
+            width: 123px;height:63px;
+          position: absolute;
+            margin-top: 50px;
+            left: 40px;
+        }
+        .eyebox:before,
+        .eyebox:after{
+            content: "";
+           position: absolute;
+            width: 43px;height: 20px;
+            background-color: black;
+
+        }
+        .eyebox:before{
+            left: -41px;
+            top: 20px;
+
+        }
+        .eyebox:after{
+              right: -41px;
+              top: 20px;
+
+        }
+        .eye{
+            width: 50px;height: 50px;
+
+            border: 5px solid black;
+            border-radius: 50%;
+            background: white;
+            position: relative;
+            float: left;
+
+        }
+        @keyframes sss {
+            0%{transform: scale(1)}
+            100%{transform: scale(1,0.5)}
+        }
+        .eyeR{
+            float: right;
+        }
+        .black{
+            width: 26px ;height: 26px;
+            background-color: black;
+            border-radius: 50%;
+           position: relative;
+            margin: auto;
+            margin-top: 11px;
+            animation: sss 0.5s linear infinite alternate;
+        }
+        .black:before{
+            content: "";
+            position: absolute;
+            width: 15px;height: 15px;
+            background-color: white;
+            border-radius: 50%;
+            top: 0px;right: 0px;
+
+        }
+        .mouse{
+            width: 51px;height: 50px;
+             border-top: 5px solid black;
+             margin:auto;
+             margin-top: 161px;
+             position: relative;
+            overflow: hidden;
+
+        }
+        .mouse:before{
+            content: "";
+            position: absolute;
+            width: 45px;height: 45px;
+            border: 3px solid black;
+            background-color: white;
+            border-radius: 15px;
+            transform: rotate(-31deg);
+            margin-top: -33px ;
+            margin-left: -1px;
+        }
+        .armbox{
+            width: 271px ;height: 63px;
+            position: absolute;
+            top: 198px;
+            left: -28px;
+        }
+        .arm{
+
+            width: 60px ;height: 60px;
+            border: 3px solid;
+            border-radius: 20px;
+            float: left;
+            transform: rotate(45deg);
+        }
+        .armR{
+       float: right;
+        }
+        .dow{
+            width: 203px;height: 103px;
+            background-color: #0000c9;
+            position: absolute;
+            bottom: 0;
+            border-top: 2px solid black;
+        }
+        .dow:after{
+            content: "";
+            width: 5px ;height: 55px;
+            background-color: #000000;
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+        }
+        .top{
+             width: 120px; height: 50px;
+             background-color: #0000c9;
+             position: absolute;
+            bottom: 103px;left: 40px;
+            border: 3px solid black;
+            border-bottom: none;
+        }
+        .top:before,
+        .top:after{
+            content: "";
+            width: 60px ;
+            height: 15px;
+            background-color: #0000c9;
+            border: 3px solid black;
+            position: absolute;
+            bottom:36px;
+
+        }
+        .top:before{
+            left: 124px;
+            transform-origin: left bottom;
+            transform: rotate(-41deg);
+
+        }
+        .top:after{
+            right: 123px;
+            transform-origin: right bottom;
+            transform: rotate(37deg);
+        }
+
+
+
+        .k{
+            width: 50px;height: 40px;
+            background-color: #0000c9;
+            border: 3px solid black;
+            border-radius: 0 0 15px 15px ;
+            margin: auto;
+
+            bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .legbox{
+            width: 82px;height: 60px;
+            position: absolute;
+            left: 66px;bottom: -47px;
+
+        }
+        .leg{
+            width: 28px;height: 50px;
+            background-color: #000000;
+            float: left;
+            border-radius: 0 0 10px 0;
+        }
+        .legR{
+           float: right;
+            border-radius:  0 0 0 10px;
+        }
+        .leg:before/*,
+        .leg:after*/{
+            content: "";
+            position: absolute;
+            width: 50px;height: 25px;
+            background-color: #172236;
+            border-radius: 20px 0 0 20px;
+             bottom: 0px;
+        }
+        .legL:before{
+            left: 0px;
+        }
+        .legR:after{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="wap">
+    <div class="hair"></div>
+    <div class="body">
+        <div class="dow">
+            <div class="k"></div>
+        </div>
+        <div class="top"></div>
+
+        <div class="eyebox">
+            <div class="eye">
+                <div class="black"></div>
+            </div>
+            <div class="eye eyeR">
+                <div class="black"></div>
+            </div>
+        </div>
+        <div class="mouse"></div>
+
+    </div>
+
+    <div class="armbox">
+        <div class="arm"></div>
+        <div class="arm armR"></div>
+    </div>
+    <div class="legbox">
+        <div class="leg legL"></div>
+        <div class="leg legR"></div>
+    </div>
+</div>
+</body>
+</html>
